@@ -1,4 +1,4 @@
-// HIOKI 3481 用 IV線保持ジグ（着脱式） v17.1
+// HIOKI 3481 用 IV線保持ジグ（着脱式） v17.2
 // ※ 日置電機（HIOKI）の非公式品です。メーカーとは関係ありません。
 // ※ 使用前後に必ず既知の活線で検電器の動作を確認してください。使用は自己責任でお願いします。
 //
@@ -42,6 +42,7 @@ w_extra = 0.6;   // 幅方向だけ追加する余裕（合計）。試作4回�
 rib_w   = 18.0;  // 先端リブの幅 実測
 rib_d   = 14.0;  // ★ 先端リブの厚み（本体13mm + 0.5mm×2 と想定）
 rib_len = 3.5;   // 先端リブの受け溝の前後方向の長さ（試作5回目の現物合わせで 2.0→3.5）
+rib_ch  = 1.0;   // リブ受け溝の後ろ側の段差を斜めにする長さ（外すときにリブが乗り上げやすく）。0で段差のまま
 cap_w   = 13.4;  // 透明キャップ根元の幅（外形図）。ツバの穴＝これ+0.6 で、リブ前側の輪(幅16.3)に当たる
 cap_d   = 10.2;  // ツバの穴・アーム内面の基準（キャップのラベル面側は中心から5.0mm：外形図）
 
@@ -149,6 +150,13 @@ module sleeve() {
         translate([0, 0, sleeve_len - rib_len]) linear_extrude(rib_len + 0.01) intersection() {
             rrect(rib_w + 2*clr + w_extra, rib_d + 2*clr, body_r + 0.5 + clr);
             translate([-50, -50]) square([100, 100]);
+        }
+        // 受け溝の後ろ側の段差を面取り（溝の寸法 → 空洞の寸法へ斜めにつなぐ）
+        if (rib_ch > 0) hull() {
+            translate([0, 0, sleeve_len - rib_len]) linear_extrude(0.01)
+                rrect(rib_w + 2*clr + w_extra, rib_d + 2*clr, body_r + 0.5 + clr);
+            translate([0, 0, sleeve_len - rib_len - rib_ch]) linear_extrude(0.01)
+                rrect(in_w, in_d, body_r + clr);
         }
         // ツバの内側の穴（透明キャップ根元 + 0.3mm）
         translate([0, 0, sleeve_len - 1]) linear_extrude(flange_t + 2) rrect(cap_w + 0.6, cap_d + 0.6, 1.0);
