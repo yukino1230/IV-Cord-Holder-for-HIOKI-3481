@@ -3,6 +3,15 @@
 日置電機（HIOKI）の非接触検電器 **3481** に取り付けて、先端のセンサー部（ノーズ）の横に IV 線を挟んで保持するための 3D プリント用ジグです。
 機器に接続されたままの IV 線にも、横からパチッとはめて使えます。
 
+## 対応機種
+
+| 機種 | 状態 |
+|---|---|
+| HIOKI 3481（LEDライト付き） | 動作確認済み |
+| HIOKI 3480（LEDライトなし） | 対応見込み（未確認）。ジグが掛かる本体・リブ・ノーズの形状は 3481 と共通です |
+
+3480 で使ってみた方は、Issue などで結果を教えてもらえるとうれしいです。
+
 > **非公式品です。** 日置電機株式会社とは関係ありません。
 > 使用前後に必ず既知の活線で検電器の動作を確認してください。使用は自己責任でお願いします。
 
@@ -98,4 +107,4 @@ IV 線にぶら下げた状態。手を離しても検電器ごと保持でき�
 
 ### English summary
 
-A 3D-printable jig for the HIOKI 3481 non-contact voltage detector that holds a solid IV wire (1.6 mm / 2.0 mm) against the side of the detector's sensor tip. Print standing (sleeve opening down). Optional pocket for a nylon cable tie (4.9 × 1.5 mm) as an insulating stiffener, inserted during a print pause. Insert the detector from the rear of the sleeve only. Unofficial; not affiliated with HIOKI E.E. Corporation. Always verify the detector on a known live circuit before and after use. Use at your own risk. Licensed under CC BY-NC 4.0.
+A 3D-printable jig for the HIOKI 3481 non-contact voltage detector (the 3480 shares the same body shape and should also fit, but is untested) that holds a solid IV wire (1.6 mm / 2.0 mm) against the side of the detector's sensor tip. Print standing (sleeve opening down). Optional pocket for a nylon cable tie (4.9 × 1.5 mm) as an insulating stiffener, inserted during a print pause. Insert the detector from the rear of the sleeve only. Unofficial; not affiliated with HIOKI E.E. Corporation. Always verify the detector on a known live circuit before and after use. Use at your own risk. Licensed under CC BY-NC 4.0.
