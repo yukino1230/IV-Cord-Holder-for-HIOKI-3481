@@ -75,9 +75,20 @@ IV 線にぶら下げた状態。手を離しても検電器ごと保持でき�
 3. 検電する。
 4. 外すときは、線を前方へ抜いてから検電器を後ろへ抜く。
 
-| 背面の矢印（実物） | 背面の矢印（3D モデル） | 後ろ（差し込み口）から見たところ |
+| 差し込み口（スリーブの後ろ） | 背面の矢印（差し込む向き） | 取り付けた状態 |
 |---|---|---|
-| ![背面の実物](images/photo_printed_back.jpg) | ![矢印](images/back_arrow.png) | ![差し込み口](images/rear_opening.png) |
+| ![差し込み口](images/photo_rear_opening.jpg) | ![背面の矢印](images/photo_printed_back.jpg) | ![取り付けた状態](images/photo_attached.jpg) |
+
+取り付けると、窓から ON/OFF ボタンと先端寄りの楕円部が見えたままになり、ボタンもそのまま押せます。
+
+<details>
+<summary>3D モデルの図（差し込み口・背面の矢印）</summary>
+
+| 差し込み口（3D モデル） | 背面の矢印（3D モデル） |
+|---|---|
+| ![差し込み口](images/rear_opening.png) | ![矢印](images/back_arrow.png) |
+
+</details>
 
 ## 調整できる主なパラメータ
 
